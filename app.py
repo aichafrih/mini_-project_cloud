@@ -26,8 +26,7 @@ conn = pyodbc.connect(conn_str)
 
 @app.route('/')
 def home():
-    return render_template('accueil.html')
-
+    return redirect(url_for('list_clients'))
 
 
 @app.route('/ajout_client', methods=['GET', 'POST'])
